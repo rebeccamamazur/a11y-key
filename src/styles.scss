@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/normalize.css/normalize.css';
+@import './colors.scss';
+
+* {
+    box-sizing: border-box;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: $smoky-black solid 0.25rem !important;
+    }
+}
+
+body, html {
+    background-color: $ghost-white;
+    color: $smoky-black;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;   
+    font-family: Arial, sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 1rem;
+    background-color: $celestial-blue;
+    color: $ghost-white;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $pacific-cyan;
+    }
+}
+
+content {
+    display: block;
+    font-size: 1.25rem;
+    height: 100%;
+    max-width: 100rem;
+    margin: 2rem auto;
+}
+
+h1 {
+    max-width: 50rem;
+}
+
+p {
+    max-width: 50rem;
+    margin-bottom: 2rem;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.flex_center {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
