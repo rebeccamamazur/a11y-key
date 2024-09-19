@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  public step:number = 2;
+  public step:number = 0;
   public key: number[] = [3,6,2,7];
   public stepForward(step: any) {
     this.step = step;
