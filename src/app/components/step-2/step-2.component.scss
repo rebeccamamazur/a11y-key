@@ -1,0 +1,17 @@
+@import '../../../colors.scss';
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto 4rem;
+}
+
+td {
+    border: 1px solid $smoky-black;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+tr:first-child td, td:first-child {
+    font-weight: bold;
+}

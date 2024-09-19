@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-end',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './end.component.scss'
 })
 export class EndComponent {
+
+  @ViewChild('header')
+  public header!: ElementRef;
+  @Input() public key: number[] = [];
+    
+  ngAfterViewInit() {
+    setTimeout(() => this.header.nativeElement.focus());
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-step-1',
@@ -11,6 +11,7 @@ export class Step1Component {
 
   @ViewChild('header')
   public header!: ElementRef;
+  @Input() public key: number[] = [];
     
   ngAfterViewInit() {
     setTimeout(() => this.header.nativeElement.focus());
