@@ -5,11 +5,11 @@
       <app-step-1 *ngIf="step === 1" [key]="key"></app-step-1>
       <app-step-2 *ngIf="step === 2" [key]="key"></app-step-2>
       <app-step-3 *ngIf="step === 3" [key]="key"></app-step-3>
-      <app-step-4 *ngIf="step === 4" [key]="key"></app-step-4>
+      <app-step-4 *ngIf="step === 4" [key]="key" (focusNextStepButton)="focusNextStepButton()"></app-step-4>
       <app-end *ngIf="step === 5" [key]="key"></app-end>
       <p class="center">
         <button *ngIf="step === 0" type="button" (click)="stepForward(step + 1)">Start</button>
-        <button *ngIf="step > 0 && step < 5" type="button" (click)="stepForward(step + 1)">Next Step</button>
+        <button *ngIf="step > 0 && step < 5" type="button" (click)="stepForward(step + 1)" #nextStep>Next Step</button>
         <button *ngIf="step === 5" type="button" (click)="stepForward(0)">Restart</button>
       </p>
     </div>

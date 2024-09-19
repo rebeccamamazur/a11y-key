@@ -1,0 +1,35 @@
+@import '../../../colors.scss';
+
+.link {
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+    display: inline;
+    background-color: transparent;
+    color: $smoky-black;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.assert-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.alert {
+    font-size: 2rem;
+    margin: 1rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    width: 50%;
+    color: $bright-pink-crayola;
+    background-color: $smoky-black;
+}

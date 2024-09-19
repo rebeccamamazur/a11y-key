@@ -1,1 +1,26 @@
 <h1 #header tabindex="-1">Step 3: Find the 3rd digit of your key</h1>
+<p>The third digit will be revealed when you click the correct button.  The button itself will tell you that it is right, and it won't be lying, so don't worry about that!</p>
+
+
+<div class="grid">
+    <div class="grid-column">
+        <div class="digit">
+            <ng-container *ngIf="revealKey">
+                {{ key[2] }}
+            </ng-container>
+            <ng-container *ngIf="revealRandom">
+                {{ randomDigit }}
+            </ng-container>
+            
+        </div>
+    </div>
+    <div class="grid-column">
+        <div class="tabs">
+            <button (click)="toggleRevealRandom()">I'm not the right button</button>
+            <button (click)="toggleRevealRandom()">I'll just give you a random number</button>
+            <button (click)="toggleRevealRandom()">I'll give you the wrong number</button>
+            <button (click)="toggleRevealKey()">Choose me to get the correct number</button>
+            <button (click)="toggleRevealRandom()">I'm also the wrong number</button>
+        </div>
+    </div>
+</div>

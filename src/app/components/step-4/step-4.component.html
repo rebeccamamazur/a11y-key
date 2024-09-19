@@ -1,1 +1,13 @@
 <h1 #header tabindex="-1">Step 4: Find the 4th digit of your key</h1>
+<p><button class="link" (click)="showDigit()">This one's easy, just click on this sentence that you're reading right now and your next number will be displayed.</button> <span *ngIf="reveal">{{ key[3] }}</span></p>
+<div aria-live="assertive" class="assert-wrapper">
+    <div aria-live="assertive">
+        <div class="alert" role="dialog" aria-label="4th digit success message" *ngIf="reveal">Congrats!  You've got your 4th digit!</div>
+    </div>
+    <div aria-live="assertive">
+        <div class="alert" role="dialog" aria-label="4th digit success message" *ngIf="reveal">To read your number you may need to navigate backward through the page.</div>
+    </div>
+    <div aria-live="assertive">
+        <div class="alert" role="dialog" aria-label="4th digit success message" *ngIf="reveal">3... 2... 1... Celebrate!</div>
+    </div>
+</div>

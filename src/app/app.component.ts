@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StartComponent } from './components/start/start.component';
 import { Step1Component } from './components/step-1/step-1.component';
@@ -16,9 +16,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+  @ViewChild('nextStep')
+  public nextStep!: ElementRef;
   public step:number = 0;
   public key: number[] = [3,6,2,7];
   public stepForward(step: any) {
     this.step = step;
+  }
+  public focusNextStepButton() {
+    setTimeout(() => this.nextStep.nativeElement.focus());
   }
 }
